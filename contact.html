@@ -15,6 +15,12 @@
         .img_ctr {width: 35%; margin: 5px;}
         a {color: lightseagreen}
         a :hover {color: lightgreen}
+        input, textarea { width: 100%; background-color: black; border: 2px solid #fff; color: white; padding: 8px 16px;}
+        label {display: block; font-family: monospace; font-size: 14px; color:lightgreen; 16px 0;}
+        textarea {height: 240px;}
+        button {background-color: rgba(162, 159, 159, 1); border: none; font-family:monospace; font-size: 18px; padding: 8px 10px;}
+        button:hover {background-color: #0F808C;}
+        input:focus, textarea:focus {border: 2px solid #0F808C; outline: none;}
     </style>
     <title>Hello, world!</title>
 </head>
@@ -23,7 +29,7 @@
     <div> <!--Navigation-->
         <ul class="nav nav-minimal">
             <li class="nav-item">
-                <a href="#" class="nav-link active">Home</a>
+                <a href="index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
@@ -31,48 +37,28 @@
                 <div class="dropdown-menu"> 
                 <a class="dropdown-item" href="about.html">About</a>
                 <a class="dropdown-item" href="projects.html">Projects</a>
-                <a class="dropdown-item" href="contact.html">Contact</a>
+                <a class="dropdown-item nav-link active" href="#">Contact</a>
                 </div>
             </li>
          </ul>
     </div>
     <div class="container-lg row" style="text-align: center;"> <!--Header-->
-        <h2 class="display-2">Hello, world!</h2>
-        <h3 class="d-md-block" class="display-3" style="color:lightseagreen">Ifeoma Abara</h3>
+        <h2 class="display-2">Contact Me</h2>
+        <h3 class="d-md-block" class="display-3" style="color:lightseagreen">I'll try to get back to you ASAP...</h3>
     </div>
-    <div class="container row"> <!--Images-->
-        <img class="col img_ctr" src="/images/Asset 6.jpg">
-        <img class="col img_ctr" src="/images/Asset 6.jpg">
+
+    <div class="form container"> <!--Form-->
+        <h4 class=display-4></h4>
+        <form action="https://formspree.io/f/mnqdvepv" method="POST" class="container row">
+          <label class="col">Name:<input type="text" name="name" /></label>
+          <label class="col">Email:<input type="text" name="_replyto" /></label>
+          <label>Message:<textarea name="message"></textarea></label>
+          <button type="submit" style="max-width: 6em;">Send</button>
+        </form>
     </div>
-    <div class="container row"> <!--Text-->
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id rem consectetur ullam iusto ratione asperiores
-            facere quod dolorum vitae perspiciatis nam, ipsa facilis eveniet odio necessitatibus ipsam sed, repudiandae
-            sapiente.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo, doloremque nisi quis veritatis reiciendis
-            quasi tempore quod tenetur dolorum dicta ut fugit ipsa architecto veniam, eum nulla consectetur beatae?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aliquid odit dignissimos possimus natus
-            deserunt quas, corporis iure provident eveniet harum impedit. Quos a velit quas voluptatum repellat magni
-            labore.</p>
-    </div>
-    <div class="container row"> <!--Images & Text-->
-        <img class="col img_ctr" src="/images/Asset 4.jpg">
-        <img class="col img_ctr" src="/images/Asset 4.jpg">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id rem consectetur ullam iusto ratione asperiores
-            facere quod dolorum vitae perspiciatis nam, ipsa facilis eveniet odio necessitatibus ipsam sed, repudiandae
-            sapiente.</p>
-    </div>
-    <div class="container row">  <!--Table Attempt-->
-       <!--<table class="d-md-block table table-hover"
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Middle</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                </tr>
-            </thead> -->
-    </div>
+
+    <br/><br/>
+
     <div class="row" style="margin-top: 5px;"><!--Footer-->
         <p style="text-align: center;">&COPY; Ifeoma Abara</p>
     </div>
