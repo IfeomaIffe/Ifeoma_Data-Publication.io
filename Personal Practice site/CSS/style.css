@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine:wght@700&display=swap');
+
+body {
+	font-family: "Lora";
+	font-size: 14px;
+	line-height: 1.4;
+	background-color: #0D0D0D;
+	color: #E6E6E6;
+	margin: 80px auto 48px auto;
+	width: 1120px;
+  scroll-behavior: smooth;
+}
+header {
+  display: flex;
+  flex-direction:  row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+h1, nav {
+  font-family: Cousine;
+	font-size: 24px;
+	font-weight: 700; 
+  line-height: 1.2;
+}
+nav {
+  margin: 20px  0 40px 0;
+}
+h2 {
+  font-family: Cousine;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 500;
+  margin:  10px  0 20px 0;
+}
+h3 {
+  font-family: Cousine;
+  font-weight: 500;
+  margin:  40px  0 40px 0;
+}
+a {
+  color: #E6E6E6;
+  text-decoration: none;
+	margin: 0 0 0 28px;
+  transition:  margin .25s;
+}
+a:hover {
+  color:  #0F808C;
+}
+.img_ctr {
+  width: 35%; 
+  margin: 5px;
+}
+section {
+  margin: 80px 0 80px 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px 32px;
+  grid-auto-flow: dense;
+}
+section h1 {
+  grid-column: 2 / span 10;
+  text-align: center;
+}
+
+section.project div.artwork {
+grid-column: 1 / span 8;
+text-align: center;
+}
+
+section.project div.description {
+  grid-column: 9/ span 4;
+}
+
+section.project img {
+  max-height: 640px;
+}
+
+section.project-alt div.artwork {
+grid-column: 5 / span 8;
+}
+
+section.project-alt div.description {
+  grid-column: 1 / span 4;
+}
+section.about div.photo {
+  grid-column: 1 / span 6;
+}
+section.about div.description {
+  grid-column: 7 / span 6;
+}
+section.about h2 {
+  margin: 0;
+  text-align: left;
+}
+section.contact div.form {
+  grid-column: 4 / span 6;
+}
+section.about p {
+  margin: 16px 0;
+}
+footer {
+  font-family: Cousine;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer a {
+  margin: 0 16px 0 16px;
+}
+
+input, textarea {
+  width: 100%;
+  background-color: black;
+  border: 2px solid #fff;
+	color: white;
+  padding: 8px 16px;
+}
+label {
+  display: block;
+  font-family: "Cousine";
+  font-size: 14px;
+  margin: 16px 0;
+}
+textarea {
+  height: 240px;
+}
+button {
+  background-color: rgba(162, 159, 159, 1);
+  border: none;
+  font-family: "Cousine";
+  font-size: 18px;
+  padding: 8px 10px;
+}
+button:hover {
+  background-color: #0F808C;
+}
+input:focus, textarea:focus {
+  border: 2px solid #0F808C;
+  outline: none;
+}
+
+@media (max-width: 1248px) {
+  body {
+    width: auto;
+    margin: 80px 64px 48px 64px;
+  }
+  
+  h1, nav, footer {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 920px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav {
+    margin: 14px 0;
+  }
+  header img {
+    max-width: 300px;
+  }
+  header a {
+    margin: 0 16px;
+    align-items: center;
+  }
+}
+
+@media (max-width:660px) {
+  nav a {
+    margin: 4px 0;
+  }
+  section {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px 24px;
+    margin: 64px 0;
+  }
+  
+  section h1, 
+  section.project div.artwork, 
+  section.project div.description, 
+  section.about div.photo, 
+  section.about div.description, 
+  section.contact div.form {
+    grid-column: 1 /span 4;
+  }
+}
+@media (max-width: 500px) {
+   body {
+    margin: 32px 24px;
+  }
+  header img {
+    width: 100%;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
