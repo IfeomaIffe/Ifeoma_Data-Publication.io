@@ -47,4 +47,9 @@ function scopeValue() {
     var x= x+2;
     console.log("Value of x +1: " +x);
     console.log("Value of z: "+z+" does not change.");
-};
+}
+
+function minutes() {
+    var currentMinute = Date().getMinutes();
+    alert("The minutes at this moment are " + currentMinute)
+}

@@ -50,6 +50,18 @@ a:hover {
   width: 35%; 
   margin: 5px;
 }
+.img_fl {
+  max-width: 60%;
+  align-items: center;
+}
+.row .carousel-inner {
+  width: auto;
+  height: 400px;
+}
+.artwork .container .carousel-inner {
+  width:540px;
+  max-height: 360px;
+}
 section {
   margin: 80px 0 80px 0;
   display: grid;
@@ -150,6 +162,12 @@ input:focus, textarea:focus {
     font-size: 16px;
   }
 }
+@media (max-width: 1040px) {
+  .artwork .container .carousel-inner {
+    width:440px;
+    max-height: 260px;
+  }
+}
 
 @media (max-width: 920px) {
   header {
@@ -165,6 +183,10 @@ input:focus, textarea:focus {
   header a {
     margin: 0 16px;
     align-items: center;
+  }
+  .artwork .container .carousel-inner {
+    width:340px;
+    max-height: 300px;
   }
 }
 
