@@ -7,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/_base.css">
-    <link rel="stylesheet" href="css/_fonts.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/_base.css">
+    <link rel="stylesheet" href="/css/_fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <!--<link rel="stylesheet" href="css/scss/"> add Sass file when I make one-->
 
-    <link rel="icon" type="image/svg" href="images/a.svg" />
+    <link rel="icon" type="image/svg" href="/images/a.svg" />
     <title>DIGS Data Publication Winter 2021</title>
 </head>
 
@@ -28,7 +28,7 @@
         <!--Navigation-->
         <ul class="nav nav-minimal container">
             <li class="nav-item">
-                <a href="index.html" class="nav-link active">Home</a>
+                <a href="#" class="nav-link active">Home</a>
             </li>
             <li class="nav item">
                 <a class="nav-link" href="about.html">About</a>
@@ -75,20 +75,21 @@
             <div class="container row">
                 <!--Text & Buttons-->
                 <p class="col-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id rem consectetur ullam iusto ratione asperiores facere quod dolorum vitae perspiciatis nam, ipsa facilis eveniet odio necessitatibus ipsam sed, repudiandae sapiente.</p>
-                <img class="rounded float-right" style="width: 50%;" src="a.svg">
+                <img class="rounded float-right" style="width: 50%;" src="/images/asset-3.png">
                 <h5 id="programCard" class="card-title col"></h5>
                 <div class="row  container mt-5">
                     <!--Buttons-->
                     <div id="buttonGroup" class="h3">JAA</div>
                     <button type="button" class="btn btn-primary" style="background-color: gray" ; onclick="conditional()">Conditional</button>
                     <button id="buttonGroup" type="button" class="btn btn-primary" style="background-color: gray" ; onclick="variables()">Variables</button>
+                    <button type="button" class="btn btn-primary" style="background-color: gray" ; onclick="parseArray(array)">Current minute</button>
                 </div>
                 <p class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo, doloremque nisi quis veritatis reiciendis quasi tempore quod tenetur dolorum dicta ut fugit ipsa architecto veniam, eum nulla consectetur beatae?Lorem ipsum dolor sit amet
                     consectetur adipisicing elit. Cum aliquid odit dignissimos possimus natus deserunt quas, corporis iure provident eveniet harum impedit. Quos a velit quas voluptatum repellat magnilabore.</p>
                 <div class="row container mt-5">
                     <!--Button-->
                     <button type="button" class="btn btn-primary" style="background-color: gray" ; onclick="howdy('ifeoma')">Greetings</button>
-                    <button type="button" class="btn btn-primary" style="background-color: gray" ; onclick="evalNumber()">Evaluated Number</button>
+                    <button type="button" class="btn btn-primary" style="background-color: gray" ; onclick="variable()">Evaluated Number</button>
                     <button type="button" class="btn btn-primary" style="background-color: gray" ; onclick="getMinutes()">Current minute</button>
                 </div>
                 <div class="row container mt-5">
@@ -113,7 +114,7 @@
 
                     <div>
                         <!--Javascript-->
-                        <script src="js/practice.js"></script>
+                        <script src="/js/practice.js"></script>
                         <!-- Optional JavaScript; choose one of the two! -->
 
                         <!-- Option 1: Bootstrap Bundle with Popper -->

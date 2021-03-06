@@ -21,15 +21,15 @@ function conditional() {
     }
 }
 
-function evalNumber(){
-  var inputValue = parseInt(prompt("Enter any five-digit number without commas"))
-  if (isNaN(inputValue)||inputValue>99999||inputValue<10000||!(Number.isInteger(inputValue))) {
-    alert(inputValue + " is not a valid 5-digit number.")
-  } else if (inputValue%2==0){
-    alert(inputValue + " is an even number.")
-  } else {
-    alert(inputValue + " is an odd number.")
-  }
+function evalNumber() {
+    var inputValue = parseInt(prompt("Enter any five-digit number without commas"))
+    if (isNaN(inputValue) || inputValue > 99999 || inputValue < 10000 || !(Number.isInteger(inputValue))) {
+        alert(inputValue + " is not a valid 5-digit number.")
+    } else if (inputValue % 2 == 0) {
+        alert(inputValue + " is an even number.")
+    } else {
+        alert(inputValue + " is an odd number.")
+    }
 }
 
 function scopeValue() {
@@ -64,3 +64,13 @@ function addElements() {
         newDiv.innerText = valueArray[i];
     }
 }
+
+function parseArray(array) {
+    var newFruit = prompt("enter a fruit"); //prompt asks for input
+    array.push(newFruit); //.push method adds a value to an array
+    var x = array.sort(); //.sort method sorts values in an array
+    var y = x.length; //.length method accesses the length of an array
+    console.log(x[y - 1]); //log the last item in the array
+    console.log(array); //log the entire array
+}
+//var newArray = ["papaya", "apple", "orange", "banana"];
