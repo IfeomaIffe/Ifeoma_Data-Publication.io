@@ -1,59 +1,77 @@
-//Define parent element
+//define parent element
 var parentElement = document.getElementById('ochreTableBody');
+//define API url
+var url = "https://ochre.lib.uchicago.edu/ochre?uuid=accd571b-bae3-4d42-93d9-58b65ec79300";
 
-//Define API URL
-var url = "http://ochre.lib.uchicago.edu/ochre?uuid=accd571b-bae3-4d42-93d9-58b65ec79300";
-
-//First function, called on <body>
+//first function, called on <body>
 function loadXML() {
-    //Chain the next function to create the XHR
+    //chain the next function to create the XHR
     XMLrequest(url);
-    console.log('loadXML --ok');
+    console.log('loadXML -- ok');
 };
 
+
 function XMLrequest(link) {
-    //Make the API call and send results to the next function
-    //XHR request
+    //make the API call and send the results to the next function
     var connect = new XMLHttpRequest();
-    connect.onreadystatechange = function name() {
+    connect.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
+            XMLResponse = this.responseXML;
             listTexts(this.responseXML);
-        }; //check status 
+        };
     };
     connect.open('GET', link, true);
     connect.send();
-    console.log('XML request --ok');
-}
-
-function list(sourceXML) {
-    document.getElementById('projectTitle').innerText = sourceXML.getElementsByTagName('metadata')[0].children[1].innerHTML;
+    console.log('XML request -- ok');
 }
 
 function listTexts(sourceXML) {
-    document.getElementById('projectTitle').innerText = sourceXML.getElementsByTagName('metadata')[0].children[0].children[1].innerHTML;
-    document.getElementById('setTitle').innerText = sourceXML.getElementsByTagName('set')[0].children[3].children[0].innerHTML;
-
-    document.getElementById('setDescription').innerText = sourq.getElementsByTagName('set')[0].children[4].innerHTML;
-    var liscenseText = document.getElementById('license');
-    liscenseText.innerText = sourceXML.getElementsByTagName('availability')[0].children[0].innerHTML;
-    liscenseText.setAttribute('href', sourceXML.getElementsByTagName('availability')[0].children[0].attributes[0].nodeValue);
-
-    //Select, parse, and display the data
+    //select, parse, and display the data
     console.log(sourceXML);
     var textList = sourceXML.getElementsByTagName('text');
+    console.log(textList);
+    var linkList = sourceXML.getElementsByTagName('links');
+    console.log(linkList);
+
     for (i = 0; i < textList.length; i++) {
+        //create one row per text
         var tr = document.createElement('tr');
-        tr.setAttribute('class', 'ochreTableRows')
+        tr.setAttribute('class', 'ochreTableRows');
         tr.setAttribute('id', 'row_' + i);
         document.getElementById('ochreTableBody').appendChild(tr);
         //populate the cells in the row
+        //new column name
         var td = document.createElement('td');
-        td.setAttribute('id', 'td_name' + i);
-        td.textContent = textList[i].children[0].chilrdren[0].innerHTML;
+        td.setAttribute('id', 'td_name_' + i);
+        //create new div
+        var newDiv = document.createElement('div');
+        newDiv.addEventListener('click', showImage.bind(this, i, linkList));
+        newDiv.textContent = textList[i].children[0].children[0].innerHTML;
+        td.appendChild(newDiv);
+        //new column description
         document.getElementById('row_' + i).appendChild(td);
         var td2 = document.createElement('td');
-        td2.setAttribute('id', 'td_desc' + i);
+        td2.setAttribute('id', 'td_desc_' + i);
         td2.textContent = textList[i].children[3].innerHTML;
         document.getElementById('row_' + i).appendChild(td2);
-    };
+    }
+}
+
+function showImage(i, linkList) {
+    var array = [];
+    for (j = 0; j < linkList[i].children.length; j++) {
+        var resource = linkList[i].children[j].outerHTML;
+        var parResource = new window.DOMParser().parseFromString(resource, "text/xml");
+        var uuid = parResource.getElementsByTagName('resource')[0].attributes[1].nodeValue;
+        //console.log(uuid);
+        var url = "https://ochre.lib.uchicago.edu/ochre?uuid=" + uuid + "&preview";
+        console.log(url);
+        array.push(url);
+    }
+    var display = document.getElementById("image display");
+    for (j = 0; j < array.length; j++) {
+        var img = document.createElement('img');
+        img.setAttribute('src', array[j]);
+        display.appendChild(img);
+    }
 }
