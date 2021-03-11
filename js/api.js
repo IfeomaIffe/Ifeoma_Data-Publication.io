@@ -6,10 +6,6 @@ function search() {
     //declare base url for API
     var url = "https://theaudiodb.com/api/v1/json/1/discography.php?s=" + artistInput;
 
-    //declare destination for album art
-    //var albumDiv = document.getElementById('albumArt');
-
-    //fetch command and check for bad response
     fetch(url)
         .then(
             function(response) {
@@ -24,19 +20,23 @@ function search() {
                     console.log(jsonContent);
                     for (i in jsonContent) {
                         var discographyDiv = document.getElementById('discography');
-                        var albumYearDiv = document.createElement('span');
-                        albumYearDiv.setAttribute('class', 'h5');
-                        albumYearDiv.innerText = jsonContent[i].intYearReleased;
-                        var albumNameDiv = document.createElement('span');
-                        albumNameDiv.setAttribute('class', 'h5');
-                        albumNameDiv.innerText = jsonContent[i].strAlbum;
-                        discographyDiv.appendChild(albumYearDiv);
-                        discographyDiv.appendChild(albumNameDiv);
+                        var newRow = document.createElement('div');
+                        newRow.setAttribute('class', 'row');
+                        newRow.setAttribute('id', 'newRow_' + i);
+                        discographyDiv.appendChild(newRow);
+                        var newYearCol = document.createElement('div');
+                        newYearCol.setAttribute('class', 'col-sm-3');
+                        newYearCol.innerText = jsonContent[i].intYearReleased;
+                        newRow.appendChild(newYearCol);
+                        var newAlbumCol = document.createElement('div')
+                        newAlbumCol.setAttribute('class', 'col');
+                        newAlbumCol.innerText = jsonContent[i].strAlbum;
+                        newRow.appendChild(newAlbumCol);
                     }
                 });
             });
-
 }
+
 
 
 //super challenge

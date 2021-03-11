@@ -11,11 +11,16 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- JS links-->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <!--Other-->
-    <link rel="icon" href="/images/a.svg" />
+    <link rel="icon" href="images/a.svg" />
 
     <title>Music API Demo</title>
+    <style>
+        .container {
+            color: whitesmoke;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,26 +29,19 @@
         <h4 class="display-4" style="margin: 5px;">Digital Humanities: Publication Design Music API Demo</h4>
         <h3 class="d-md-block" class="display-3" style="color:gray">Ifeoma Abara</h3>
     </div>
-    <div class="container mt-3">
+    <div class="container-fluid">
         <div id="title">Music API Demo</div>
         <form>
             <div class="row">
                 <div class="col">
                     <input id="artistInput" type="text" class="form-control" placeholder="Artist name">
                 </div>
-                <!-- <div class="col">
-                    <input id="albumInput" type="text" class="form-control" placeholder="Album name">
-                </div> -->
             </div>
         </form>
-        <button type="submit" class="btn btn-primary my-3" on-click="search()">Search</button>
-        <div class="container" id="music">
+        <button type="submit" class="btn  my-3" on-click="search()">Search</button>
+        <div class="container" id="discography">
             <div class="row">
-                <!-- <div class="col">
-                    <img class="img_fl" id="albumArt"/>
-                </div> -->
             </div>
-            <div class="col" id="discography"></div>
         </div>
     </div>
     <div>
@@ -61,7 +59,7 @@
         <a href="https://open.spotify.com/user/1260441940?si=T932AkvBRgWq_V6YMFPwyg">Spotify</a>
     </footer>
 
-    <script src="api.js"></script>
+    <script src="js/api.js"></script>
 </body>
 
 </html>

@@ -1,12 +1,11 @@
 //define parent element
-var parentElement = document.getElementById('ochreTableBody');
-//define API url
-var url = "https://ochre.lib.uchicago.edu/ochre?uuid=accd571b-bae3-4d42-93d9-58b65ec79300";
+var link = "https://ochre.lib.uchicago.edu/ochre?uuid=83739c7a-b4ce-47c7-b723-b5ccc7da71a2";
+var textList = [];
 
 //first function, called on <body>
 function loadXML() {
     //chain the next function to create the XHR
-    XMLrequest(url);
+    XMLrequest(link);
     console.log('loadXML -- ok');
 };
 
@@ -27,9 +26,7 @@ function XMLrequest(link) {
 
 function listTexts(sourceXML) {
     //select, parse, and display the data
-    console.log(sourceXML);
     var textList = sourceXML.getElementsByTagName('text');
-    console.log(textList);
     var linkList = sourceXML.getElementsByTagName('links');
     console.log(linkList);
 
@@ -54,6 +51,11 @@ function listTexts(sourceXML) {
         td2.setAttribute('id', 'td_desc_' + i);
         td2.textContent = textList[i].children[3].innerHTML;
         document.getElementById('row_' + i).appendChild(td2);
+        var td3 = document.createElement('td');
+        td3.className = 'Description';
+        var textDescription = textList[i].childNodes[3].innerHTML;
+        td3.textContent = textDescription;
+        document.getElementById('row_' + i).appendChild(td3);
     }
 }
 

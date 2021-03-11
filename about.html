@@ -13,57 +13,107 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg" href="images/a.svg" />
     <title>Ifeoma Abara</title>
+    <style>
+        h1 {
+            font-size: 9em;
+            position: flex;
+            top: 50%;
+            left: 0%;
+            transform: translate(-50%, -40%);
+            float: unset;
+            overflow: visible;
+            color: darkolivegreen;
+        }
+        
+        h4 {
+            font-size: 3.7em;
+            position: float;
+            line-height: 1.2em;
+            ;
+            top: 50%;
+            left: 80%;
+            transform: translate(-10%, -9%);
+            float: unset;
+            overflow: float;
+            color: darkolivegreen;
+            margin: -1/6em;
+            padding-left: 18mm;
+            padding-right: 10mm;
+        }
+        
+        h3 {
+            margin-top: -7em;
+            line-height: 1.5em;
+        }
+        
+        p {
+            margin: 8px 0px;
+        }
+    </style>
 </head>
 
 <body>
+    <!--Header-->
     <div class="container-lg row" style="text-align: center;">
-        <!--Header-->
         <div class="container-lg">
             <img class="img_ctr" type="image/svg" src="images/a.svg" alt="Ifeoma Abara" style="margin-bottom: 3em" ;/>
-            <h3>Visual Artist based in Chicago, Illinois.</h3>
         </div>
     </div>
 
-    <div>
-        <!--Navigation-->
-        <ul class="nav nav-minimal">
-            <li class="nav-item">
-                <a href="datapub.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav item">
-                <a href="#" class="nav-link active">About</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data Publication</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="api.html">Music API Demo</a>
-                    <a class="dropdown-item" href="#">Element Demo</a>
-                    <a class="dropdown-item" href="wiki.html">Wiki Demo</a>
-                    <a class="dropdown-item" href="digitalboard.html">Digital Chalkboard</a>
-                    <a class="dropdown-item" href="final.html">Final Project</a>
-
-                </div>
-            </li>
-            <li class="nav item">
-                <a class="nav-link" href="portfolio.html">Portfolio</a>
-            </li>
-        </ul>
-    </div>
+    <!--Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light container-fluid">
+        <a class="navbar-link" href="index.html" id="nav-link">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Data Publication</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" id="nav-link" href="api.html">Music API Demo</a>
+                        <a class="dropdown-item" id="nav-link" href="mapping.html">Map Demo</a>
+                        <a class="dropdown-item" id="nav-link" href="xmldemo.html">OCHRE Demo</a>
+                        <a class="dropdown-item" id="nav-link" href="wiki.html">Wiki Demo</a>
+                        <a class="dropdown-item" id="nav-link" href="digitalboard.html">Digital Chalkboard</a>
+                        <a class="dropdown-item" id="nav-link" href="Aquarium.html">XSLT Demo</a>
+                        <a class="dropdown-item" id="nav-link" href="research website/final.html">Final Project</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-link" href="ifeomaabara.com">Portfolio</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <section class="about">
         <!--Image and Links-->
         <div class="photo">
             <img src="images/film127.jpg" alt="Ifeoma Abara headshot" />
-            <!-- <p><a href="images/Marissa Abara Portfolio MONO.pdf" target="_blank" class="centered">
-		        <h2>PDF Portfolio</h2></a></p>
-		      <p><a href="images/Marissa Abara Portfolio MONO.pdf" target="_blank" class="centered">
-		        <h2>Resume</h2></a></p>
-				<p><a href="portfolio/blog.html" class="centered"><h2>Blog</h2></a></p> -->
+            <p>
+                <a href="images/Marissa Abara Portfolio MONO.pdf" target="_blank" class="centered">
+                    <h2>PDF Portfolio</h2>
+                </a>
+            </p>
+            <p>
+                <a href="images/Marissa Abara Portfolio MONO.pdf" target="_blank" class="centered">
+                    <h2>Resume</h2>
+                </a>
+            </p>
+            <p>
+                <a href="portfolio/blog.html" class="centered">
+                    <h2>Blog</h2>
+                </a>
+            </p>
         </div>
         <div class="description">
             <!--Text-->
-            <h2>About</h2>
-            <h3 style="align-items: center;">Time is fleeting and so am I.</h3>
+            <h1 class="container">About</h1>
+            <h3 style="align-items: center;">Visual Artist based in Chicago, Illinois.</h3>
             <p>Morbi suscipit consequat ornare. Aliquam erat volutpat. Suspendisse potenti. Etiam imperdiet metus vel massa facilisis tincidunt. Ut in massa sed felis placerat congue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
                 cubilia Curae; Sed blandit eleifend magna vel iaculis. Cras finibus leo convallis ex fringilla vestibulum. Quisque lobortis massa eget ligula lacinia, et dignissim ante accumsan. Morbi tempor suscipit nisi et convallis. Morbi eget risus
                 non mauris suscipit ultricies.</p>
@@ -73,6 +123,8 @@
         </div>
     </section>
 
+    <h4> Nulla sodales dui vitae sagittis sollicitudin. Donec in accumsan metus, vitae sagittis elit. Maecenas ac sollicitudin lorem, ut egestas nibh. Nulla facilisi.
+    </h4>
     <section class="contact">
         <!--Contact Form-->
         <div class="form">
@@ -99,12 +151,13 @@
     </section>
 
 
-    <footer>
-        <!--Footer-->
+    <!--Footer-->
+    <div class="footer container-fluid" style="margin-top: 4cm; text-align: center;">
         <a href="https://www.instagram.com/ifeomabara/">Instagram</a>
         <a href="mailto:ifeomabr@gmail.com">Email</a>
         <a href="https://open.spotify.com/user/1260441940?si=T932AkvBRgWq_V6YMFPwyg">Spotify</a>
-    </footer>
+        <p>&COPY; Ifeoma Abara</p>
+    </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>

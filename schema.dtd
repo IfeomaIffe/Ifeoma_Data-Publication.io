@@ -1,0 +1,64 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT aquarium (tank)+>
+<!ATTLIST aquarium
+  xmlns CDATA #FIXED ''
+  xmlns:xsi CDATA #FIXED 'http://www.w3.org/2001/XMLSchema-instance'
+  lang NMTOKEN #REQUIRED
+  xsi:noNamespaceSchemaLocation NMTOKEN #REQUIRED>
+
+<!ELEMENT tank (tankName,waterType,fishInventory,supervisors)>
+<!ATTLIST tank
+  xmlns CDATA #FIXED ''
+  n CDATA #REQUIRED>
+
+<!ELEMENT tankName (#PCDATA)>
+<!ATTLIST tankName
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT waterType (#PCDATA)>
+<!ATTLIST waterType
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT fishInventory (fish)+>
+<!ATTLIST fishInventory
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT supervisors (supervisor)+>
+<!ATTLIST supervisors
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT fish (nickname,taxon,birthday)>
+<!ATTLIST fish
+  xmlns CDATA #FIXED ''
+  n CDATA #REQUIRED>
+
+<!ELEMENT supervisor (lastName,firstName,shift)>
+<!ATTLIST supervisor
+  xmlns CDATA #FIXED ''
+  n CDATA #REQUIRED>
+
+<!ELEMENT nickname (#PCDATA)>
+<!ATTLIST nickname
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT taxon (#PCDATA)>
+<!ATTLIST taxon
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT birthday (#PCDATA)>
+<!ATTLIST birthday
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT lastName (#PCDATA)>
+<!ATTLIST lastName
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT firstName (#PCDATA)>
+<!ATTLIST firstName
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT shift (#PCDATA)>
+<!ATTLIST shift
+  xmlns CDATA #FIXED ''
+  n CDATA #REQUIRED>
