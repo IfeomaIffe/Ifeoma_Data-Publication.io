@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+body {
+    font-family: "Lora";
+    font-size: 14px;
+    line-height: 1.4;
+    background-color: #ffffff;
+    color: #101C14;
+    margin: 80px auto 48px auto;
+    width: 1120px;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: Oswald;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: Oswald;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 500;
+    margin: 10px 0 20px 0;
+}
+
+h3 {
+    font-family: Oswald;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 40px 0 30px 0;
+}
+
+h4 {
+    font-family: Oswald;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 10px 0 10px 0;
+}
+
+a {
+    font-family: Oswald;
+    color: #101C14;
+    text-decoration: none;
+    transition: margin .25s;
+}
+
+a:hover {
+    color: #0F808C;
+}
+
+nav {
+    font-family: Oswald;
+    background-color: #211b1a;
+}
+
+nav a,
+li.nav-item {
+    text-transform: uppercase;
+    font-size: larger;
+    color: whitesmoke;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: whitesmoke;
+}
+
+#nav-link {
+    margin: 14px;
+    font-size: large;
+    padding: 0;
+}
+
+a#nav-link.dropdown-item {
+    margin: 5px;
+}
+
+.img_ctr {
+    width: 35%;
+    margin: 5px;
+}
+
+.img_fl {
+    max-width: 60%;
+    align-items: center;
+}
+
+.accordion-item {
+    background-color: rgb(190, 190, 190);
+}
+
+.row .carousel-inner {
+    width: auto;
+    height: 400px;
+}
+
+.artwork .container .carousel-inner {
+    width: 540px;
+    max-height: 360px;
+}
+
+section {
+    margin: 80px 0 80px 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px 32px;
+    grid-auto-flow: dense;
+}
+
+section h1 {
+    grid-column: 2 / span 10;
+    text-align: center;
+}
+
+section.project div.artwork {
+    grid-column: 1 / span 8;
+    text-align: center;
+}
+
+section.project div.description {
+    grid-column: 9/ span 4;
+}
+
+section.project img {
+    max-height: 640px;
+}
+
+section.project-alt div.artwork {
+    grid-column: 5 / span 8;
+}
+
+section.project-alt div.description {
+    grid-column: 1 / span 4;
+}
+
+section.about div.photo {
+    grid-column: 1 / span 6;
+}
+
+section.about div.description {
+    grid-column: 7 / span 6;
+}
+
+section.about h2 {
+    margin: 0;
+    text-align: left;
+}
+
+section.contact div.form {
+    grid-column: 4 / span 6;
+}
+
+section.about p {
+    margin: 16px 0;
+}
+
+footer {
+    font-family: Cousine;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    margin: 0 16px 0 16px;
+}
+
+input,
+textarea {
+    width: 100%;
+    background-color: rgb(199, 199, 199);
+    border: 2px solid #fff;
+    color: white;
+    padding: 8px 16px;
+}
+
+label {
+    display: block;
+    font-family: "Cousine";
+    font-size: 14px;
+    margin: 16px 0;
+}
+
+textarea {
+    height: 240px;
+}
+
+button {
+    font-family: Oswald;
+}
+
+button:hover {
+    background-color: #0F808C;
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid #0F808C;
+    outline: none;
+}
+
+@media (max-width: 1248px) {
+    body {
+        width: auto;
+        margin: 80px 64px 48px 64px;
+    }
+    h1,
+    footer {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1040px) {
+    .artwork .container .carousel-inner {
+        width: 440px;
+        max-height: 260px;
+    }
+}
+
+@media (max-width: 920px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    header img {
+        max-width: 300px;
+    }
+    header a {
+        margin: 0 16px;
+        align-items: center;
+    }
+    .artwork .container .carousel-inner {
+        width: 340px;
+        max-height: 300px;
+    }
+}
+
+@media (max-width:660px) {
+    section {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px 24px;
+        margin: 64px 0;
+    }
+    section h1,
+    section.project div.artwork,
+    section.project div.description,
+    section.about div.photo,
+    section.about div.description,
+    section.contact div.form {
+        grid-column: 1 /span 4;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        margin: 32px 24px;
+    }
+    header img {
+        width: 100%;
+    }
+}
